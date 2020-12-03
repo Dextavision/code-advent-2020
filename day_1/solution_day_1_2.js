@@ -1,11 +1,11 @@
 // Task:
 // In your expense report, what is the product of the three entries that sum to 2020?
 
-var fs = require('fs');
-var inputArray = fs.readFileSync('input.txt').toString().split("\n");
+let fs = require("fs");
+let inputArray = fs.readFileSync("input.txt").toString().split("\n");
 
 // Convert to Int
-inputArray = inputArray.map(number => parseInt(number));
+inputArray = inputArray.map((number) => parseInt(number));
 
 const MATCH_NUMBER = 2020;
 
@@ -17,7 +17,7 @@ let third_number = 0;
 inputArray.forEach((num) => {
   inputArray.forEach((secNum) => {
     inputArray.some((thirdNumb) => {
-      if (num === secNum === thirdNumb) {
+      if ((num === secNum) === thirdNumb) {
         return;
       }
 
@@ -28,7 +28,7 @@ inputArray.forEach((num) => {
         return true;
       }
     });
-  })
+  });
 });
 
 console.log(first_number * second_number * third_number);

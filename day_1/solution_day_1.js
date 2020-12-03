@@ -1,11 +1,11 @@
 // Task:
 // Find the two entries that sum to 2020; what do you get if you multiply them together?
 
-var fs = require('fs');
-var inputArray = fs.readFileSync('input.txt').toString().split("\n");
+let fs = require("fs");
+let inputArray = fs.readFileSync("input.txt").toString().split("\n");
 
 // Convert to Int
-inputArray = inputArray.map(number => parseInt(number));
+inputArray = inputArray.map((number) => parseInt(number));
 
 const MATCH_NUMBER = 2020;
 
